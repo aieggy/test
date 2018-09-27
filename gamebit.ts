@@ -387,23 +387,14 @@ namespace gamebit {
                     Light = 4096 - argsInt;
                 }
                 else if (cmd.charAt(0).compare("J") == 0 ) {
-					if(cmd.charAt(1).compare("X")==0){
-						let args: string = cmd.substr(2, cmd.length-2);
-						let argsInt: number = strToNumber(args);
-						if (argsInt == -1) {
-							handleCmd = "";
-						}
-						JoystickX1 = 4096-argsInt;
-                        return;
-                    }else if(cmd.charAt(1).compare("Y")==0){
-						let args: string = cmd.substr(2, cmd.length-2);
-						let argsInt: number = strToNumber(args);
-						if (argsInt == -1) {
-							handleCmd = "";
-						}
-						JoystickY1 = argsInt;
-                        return;
-					}
+					let countX=findIndexof(cmd,"X",0);
+					let countY=findIndexof(cmd,"Y",0);
+					let XString="";
+					let YString="";
+					XString=cmd.substr(countX+1,countY-countX-1);
+					YString=cmd.substr(countY+1,cmd.length-1);
+					JoystickX1=parseInt(XString);
+					JoystickY1=parseInt(YString);
                 }
                 else if (cmd.charAt(0).compare("U") == 0) {
                     let args: string = cmd.substr(1, cmd.length-1);
