@@ -586,6 +586,8 @@ namespace gamebit {
         R_F = (readRedLight() + R_F) / 2;
         G_F = (readGreenLight() + G_F) / 2;
         B_F = (readBlueLight() + B_F) / 2;
+		
+		basic.showString("R"+R_F+"G"+G_F+"B"+B_F);
 
     }
 
@@ -603,6 +605,8 @@ namespace gamebit {
         r_f = (readRedLight() + r_f) / 2;
         g_f = (readGreenLight() + g_f) / 2;
         b_f = (readBlueLight() + b_f) / 2;
+		
+		basic.showString("r"+r_f+"g"+g_f+"b"+b_f);
     }
 
 	/**
@@ -614,6 +618,8 @@ namespace gamebit {
         let g = readGreenLight();
         let b = readBlueLight();
         let t = Colors.Red;
+		
+		basic.showString("r"+r+"g"+g+"b"+b);
 
         if (r < r_f || r > R_F || g < g_f || g > G_F || b < b_f || b > B_F) {
             return false;
