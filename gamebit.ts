@@ -393,7 +393,7 @@ namespace gamebit {
 						if (argsInt == -1) {
 							handleCmd = "";
 						}
-						JoystickX1 = argsInt;
+						JoystickX1 = 4096-argsInt;
                         return;
                     }else if(cmd.charAt(1).compare("Y")==0){
 						let args: string = cmd.substr(2, cmd.length-2);
