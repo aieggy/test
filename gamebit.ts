@@ -339,34 +339,34 @@ namespace gamebit {
             if (index != -1) {
                 let cmd: string = handleCmd.substr(startIndex, index - startIndex);
                 if (cmd.charAt(0).compare("K") == 0 ) {
-                    for (let j = 0; j < cmd.length - 1; j++) {
-                        let args: string = cmd.substr(1 + j, 1);
-                        let argsInt: number = strToNumber(args);
-                        if (argsInt == -1) {
-                            handleCmd = "";
-                            return;
-                        }
-                        switch (argsInt) {
-                            case 1:
-                                control.raiseEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, HandleButton.B1);
-                                break;
-
-                            case 2:
-                                control.raiseEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, HandleButton.B2);
-                                break;
-
-                            case 3:
-                                control.raiseEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, HandleButton.B3);
-                                break;
-
-                            case 4:
-                                control.raiseEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, HandleButton.B4);
-                                break;
-
-                            default:
-                                break;
-                        }
+					let args: string = cmd.charAt(1);
+                    let argsInt: number = parseInt(args);
+                    if (argsInt == -1) {
+                        handleCmd = "";
+                        return;
                     }
+					
+					switch (argsInt) {
+						case 1:
+							control.raiseEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, HandleButton.B1);
+							break;
+
+						case 2:
+							control.raiseEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, HandleButton.B2);
+							break;
+
+						case 3:
+							control.raiseEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, HandleButton.B3);
+							break;
+
+						case 4:
+							control.raiseEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, HandleButton.B4);
+							break;
+
+						default:
+							break;
+					}
+                   
                 }
                 else if (cmd.charAt(0).compare("S") == 0 ) {
                     let args: string = cmd.substr(1, cmd.length-1);
