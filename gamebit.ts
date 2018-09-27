@@ -387,7 +387,6 @@ namespace gamebit {
                     Light = 4096 - argsInt;
                 }
                 else if (cmd.charAt(0).compare("J") == 0 ) {
-					basic.showString(cmd);
 					if(cmd.charAt(1).compare("X")==0){
 						let args: string = cmd.substr(2, cmd.length-2);
 						let argsInt: number = strToNumber(args);
@@ -397,6 +396,7 @@ namespace gamebit {
 						JoystickX1 = argsInt;
                         return;
                     }else if(cmd.charAt(1).compare("Y")==0){
+						basic.showString(cmd);
 						let args: string = cmd.substr(2, cmd.length-2);
 						let argsInt: number = strToNumber(args);
 						if (argsInt == -1) {
