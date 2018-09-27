@@ -493,9 +493,13 @@ namespace gamebit {
             SerialPin.P8,
             BaudRate.BaudRate115200);
         control.waitMicros(50);
-        basic.forever(() => {
+       /* basic.forever(() => {
             getHandleCmd();
-        });
+        });*/
+		while(1)
+		{
+			getHandleCmd();
+		}
     }
 
     /**
