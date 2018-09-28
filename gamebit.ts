@@ -26,8 +26,6 @@ namespace gamebit {
 
 
     export enum HandleSensorValue {
-        //% block="Sound"
-        SOUND,
         //% block="Light"
         LIGHT,
         //% block="Left joystick X"
@@ -745,7 +743,7 @@ namespace gamebit {
     export function getHandleSensorValue(type: HandleSensorValue): number {
         let value: number = 0;
         switch (type) {
-            case HandleSensorValue.SOUND: value = Sound; break;
+            //case HandleSensorValue.SOUND: value = Sound; break;
             case HandleSensorValue.LIGHT: value = Light; break;
             case HandleSensorValue.JOYSTICK_X1: value = JoystickX1; break;
             case HandleSensorValue.JOYSTICK_Y1: value = JoystickY1; break;
