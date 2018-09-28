@@ -677,7 +677,7 @@ namespace gamebit {
         r_f = readRedLight();
         g_f = readGreenLight();
         b_f = readBlueLight();
-
+ 
         //Measure twice, and then calculate their average.
         r_f = (readRedLight() + r_f) / 2;
         g_f = (readGreenLight() + g_f) / 2;
