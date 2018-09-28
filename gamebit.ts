@@ -393,8 +393,8 @@ namespace gamebit {
 					let YString="";
 					XString=cmd.substr(countX+1,countY-countX-1);
 					YString=cmd.substr(countY+1,cmd.length-1);
-					JoystickX1=parseInt(XString);
-					JoystickY1=parseInt(YString);
+					JoystickX1=4096-parseInt(XString);
+					JoystickY1=4096-parseInt(YString);
                 }
                 else if (cmd.charAt(0).compare("U") == 0) {
                     let args: string = cmd.substr(1, cmd.length-1);
@@ -476,8 +476,8 @@ namespace gamebit {
 			let YString="";
 			XString=strtemp.substr(countX+1,countY-countX-1);
 			YString=strtemp.substr(countY+1,strtemp.length-1);
-			JoystickX1=parseInt(XString);
-			JoystickY1=parseInt(YString);
+			JoystickX1=4096-parseInt(XString);
+			JoystickY1=4096-parseInt(YString);
 		}
 		else if (strtemp.charAt(0).compare("U") == 0) {
 			let args: string = strtemp.substr(1, strtemp.length-1);
@@ -615,10 +615,10 @@ namespace gamebit {
 		let SpeedValue="";
 		
 		if(speed>0){
-			speedtemp = speed;
+			speedtemp = 256-speed;
 		}
 		else{
-			speedtemp = 256+speed;
+			speedtemp = Math.abs(speed);
 		}
 		strtemp = speedtemp.toString();
 		SpeedValue="d#"+strtemp+"$";
