@@ -24,7 +24,6 @@
 	"gamebit.HandleButton.B2|block":"B2",
 	"gamebit.HandleButton.B3|block":"B3",
 	"gamebit.HandleButton.B4|block":"B4",
-	"gamebit.HandleSensorValue.SOUND|block":"声音",
 	"gamebit.HandleSensorValue.LIGHT|block":"光线",
 	"gamebit.HandleSensorValue.JOYSTICK_X1|block":"摇杆X",
 	"gamebit.HandleSensorValue.JOYSTICK_Y1|block":"摇杆Y",
