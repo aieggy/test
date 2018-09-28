@@ -1,5 +1,5 @@
 {
-	"gamebit.gamebitInit|block": "初始化gamebit",
+	"gamebit.gamebitInit|block": "初始化Gamebit",
 	"gamebit.setServoPosition|block": "设置舵机角度|%angle",
 	"gamebit.setPixelRGB|block":"设置彩灯颜色为|%rgb|",
 	"gamebit.setMotorSpeed|block":"设置马达速度|%speed",
